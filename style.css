@@ -29,7 +29,7 @@ text-decoration: none;
 font-weight: 600;
 cursor: pointer;
 opacity: 0;
-animation: slideRight 1s ease forwards;
+animation: slideRight .5s ease forwards;
 }
 
 
@@ -54,21 +54,52 @@ animation: slideRight 1s ease forwards;
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: #081b29;
+    background: #091b2a;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
+}
+
+.profilePic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: imageFloat 4s ease-in-out infinite;
+}
+
+@keyframes imageFloat{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.profilePic p{
+    box-shadow: 0 0 20px #0ef;
+    border-radius: 5px;
+}
+
+.profilePic img{
+ 
+    background: transparent;
+    width: 20vw;
+
 }
 
 .home-content{
     max-width: 600px;
     }
 
+
 .home-content h3{
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
-    animation: slideBottom 1s ease forwards;
+    animation: slideBottom .5s ease forwards;
     animation-delay: .7s;
 
 }
@@ -84,15 +115,15 @@ animation: slideRight 1s ease forwards;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
-animation: slideRight 1s ease forwards;
-animation-delay: 1s;
+animation: slideRight .5s ease forwards;
+animation-delay: .7s;
 }
 
 .home-content p{
     font-size: 20px;
     opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-sci a{
@@ -101,13 +132,17 @@ justify-content: center;
 align-items: center;
 width: 40px;
 height: 40px;
-font-size: 25px;
+font-size: 20px;
 background: transparent;
 border: 2px solid #0ef;
 border-radius: 50%;
 color: #0ef;
 text-decoration: none;
 margin: 30px 15px 30px 0;
+transition: .3s;
+opacity: 0;
+animation: slideTop .7s ease forwards;
+
 }
 
 
@@ -127,6 +162,8 @@ margin: 30px 15px 30px 0;
     color: #081b29;
     letter-spacing: 1px;
     font-weight: 600;
+    box-shadow: 0 0 20px #0ef,
+    0 0 25px #0ef
 }
 
 .btn-box:hover{
